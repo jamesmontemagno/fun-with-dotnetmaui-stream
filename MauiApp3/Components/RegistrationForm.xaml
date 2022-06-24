@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp3.Components.RegistrationForm">
+    <VerticalStackLayout>
+        <Label FontSize="20" Text="{Binding CardTitle, FallbackValue='Hello world'}"/>
+        <Label  Text="First name:"/>
+        <Entry Text=""/>
+        <Label Margin="0,10,0,0"  Text="Last name:"/>
+        <Entry Text=""/>
+        <Button Margin="0,10,0,0" Text="native button"/>
+    </VerticalStackLayout>
+</ContentView>

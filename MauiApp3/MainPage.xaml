@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MauiApp3"
+             xmlns:pages="clr-namespace:MauiApp3.Pages"
+             xmlns:components="clr-namespace:MauiApp3.Components"
+             x:Class="MauiApp3.MainPage"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             BackgroundColor="{DynamicResource PageBackgroundColor}">
+
+    <Grid RowDefinitions="Auto,*,100">
+        <components:RegistrationForm Margin="10"
+                                     CardTitle="My Title"/>
+        <BlazorWebView Grid.Row="1" HostPage="wwwroot/index.html">
+            <BlazorWebView.RootComponents>
+                <RootComponent Selector="#app" ComponentType="{x:Type pages:Counter}" />
+            </BlazorWebView.RootComponents>
+        </BlazorWebView>
+        <toolkit:DrawingView
+            Grid.Row="2"
+            LineColor="Red"
+            LineWidth="5" />
+    </Grid>
+</ContentPage>
